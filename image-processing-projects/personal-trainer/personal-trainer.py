@@ -31,7 +31,7 @@ def findAngle(img, p1, p2, p3, lmList, draw=True) :
     return angle
 
 
-cap = cv2.VideoCapture("C:/Users/furka/Desktop/computer-vision/image-processing-projects/personal-trainer/video2.mp4")
+cap = cv2.VideoCapture("C:/Users/furka/Desktop/computer-vision/image-processing-projects/personal-trainer/video1.mp4")
 
 mpPose = mp.solutions.pose
 pose = mpPose.Pose()

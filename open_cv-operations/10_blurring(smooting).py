@@ -22,7 +22,7 @@ sigmaX and sigmaY, we must specify the standard deviation in the X and Y directi
 median blur 
 
 takes the median of all pixels under the kernel area and the central element is replaced by that median value.
-he is very wary of salt and pepper noise.
+Its is very wary of salt and pepper noise.
 
 """
 
