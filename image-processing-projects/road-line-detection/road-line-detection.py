@@ -6,8 +6,8 @@ def region_of_interest(image, vertices):
     
     match_mask_color = 255
     
-    cv2.fillPoly(mask, vertices, match_mask_color)
-    masked_image = cv2.bitwise_and(image, mask)
+    cv2.fillPoly(mask, vertices, match_mask_color) # This effectively marks the region of interest in the mask with the specified color.
+    masked_image = cv2.bitwise_and(image, mask) # The result is an image where only the region of interest is retained, and the rest of the image is masked out.
     return masked_image
 
 def drawLines(image, lines):
@@ -28,7 +28,7 @@ def process(image):
     region_of_interest_vertices = [(0, height), (width/2, height/2), (width, height)]
     
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    canny_image = cv2.Canny(gray_image, 250, 120)
+    canny_image = cv2.Canny(gray_image, 250, 120) # The Canny algorithm is a multi-step process that aims to detect the edges of objects within an image.
     cropped_image = region_of_interest(canny_image, np.array([region_of_interest_vertices], np.int32))
     # if threshold decrease the line count is increase
     lines = cv2.HoughLinesP(cropped_image, rho = 2, theta = np.pi/180, threshold = 200, lines = np.array([]),minLineLength = 150, maxLineGap = 4)

@@ -9,6 +9,8 @@ def checkParkSpaces(imgg):
     for pos in posList:
         x, y = pos
 
+        # This line extracts a cropped region from the original image (imgg).
+        # It specifies the range of rows (from y to y + height) and columns (from x to x + width) to create a sub-image that corresponds to the parking space.
         img_crop = imgg[y : y + height, x : x + width]
         count = cv2.countNonZero(img_crop) # count none zero
 

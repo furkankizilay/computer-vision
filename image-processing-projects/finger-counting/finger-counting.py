@@ -2,15 +2,14 @@ import cv2
 import mediapipe as mp
 
 cap = cv2.VideoCapture(0)
-cap.set(3,640)
-cap.set(4,480)
+cap.set(3,640) # This line sets the width of the captured video frames to 640 pixels.
+cap.set(4,480) # This line sets the height of the captured video frames to 480 pixels. 
 
 mpHand = mp.solutions.hands # create mpHand object
 hands = mpHand.Hands() # provide detection(false) tracking(true), default false
 mpDraw = mp.solutions.drawing_utils # create mpDraw for vis
 
 tipIds = [4, 8, 12, 16, 20] # finger three points
-
 
 while True:
 

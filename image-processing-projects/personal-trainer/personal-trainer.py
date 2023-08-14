@@ -63,7 +63,7 @@ while True:
 
         # video2
         angle = findAngle(img, 23, 25, 27, lmList)
-        per = np.interp(angle, (65, 145), (0, 100))
+        per = np.interp(angle, (65, 145), (0, 100)) # It essentially scales and maps the angle to a percentage value (per) between 0 and 100.
 
         if per == 100:
             if dir == 0:

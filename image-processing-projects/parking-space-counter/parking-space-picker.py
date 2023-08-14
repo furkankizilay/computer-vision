@@ -18,6 +18,7 @@ def mouseClick(events, x, y, flags, params): # will leave a rectangle where pres
     if events == cv2.EVENT_RBUTTONDOWN:
         for i, pos in enumerate(posList):
             x1, y1 = pos
+            # This condition checks if both the x and y coordinates of the mouse click are within the defined rectangular region.
             if x1 < x < x1 + width and y1 < y < y1 + height:
                 posList.pop(i)
 
