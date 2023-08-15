@@ -3,7 +3,8 @@ import cvzone
 from cvzone.FaceMeshModule import FaceMeshDetector # facemesh detection
 from cvzone.PlotModule import LivePlot 
 
-cap = cv2.VideoCapture("C:/Users/furka/Desktop/computer-vision/image-processing-projects/sleep-detection/video2.mp4")
+#cap = cv2.VideoCapture("C:/Users/furka/Desktop/computer-vision/image-processing-projects/sleep-detection/video2.mp4")
+cap = cv2.VideoCapture(0)
 detector = FaceMeshDetector()
 plotY = LivePlot(540, 360, [10, 60]) # [10, 60] y axis
 
@@ -41,7 +42,7 @@ while True:
 
         ratioAvg = sum(ratioList)/len(ratioList)
 
-        if ratioAvg<35 and counter == 0:
+        if ratioAvg<39 and counter == 0:
             blickCounter +=1
             color = (0,255,0)
             counter = 1

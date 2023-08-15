@@ -1,5 +1,5 @@
 """
-Template mapping is used to search and find the location of a template image in a larger image.
+Template matching is used to search and find the location of a template image in a larger image.
 
 It shifts the template image over the input image and compares the template and patch of the input image below the template image.
 
