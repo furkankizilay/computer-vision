@@ -46,7 +46,7 @@ print(x_train.shape)
 print(x_test.shape)
 print(x_val.shape)
 
-"""
+
 # vis
 fig, axes = plt.subplots(3,1, figsize=(7,7))
 fig.subplots_adjust(hspace=0.5)
@@ -59,7 +59,7 @@ axes[1].set_title("y_test")
 sns.countplot(y_val, ax=axes[2])
 axes[2].set_title("y_val")
 plt.show()
-"""
+
 
 # preporcess
 def preProcess(img):
@@ -115,9 +115,9 @@ hist = model.fit_generator(dataGen.flow(x_train, y_train, batch_size = batch_siz
                                         validation_data = (x_val, y_val),
                                         epochs = 15,steps_per_epoch = x_train.shape[0]//batch_size, shuffle = 1)
 
-pickle_out = open("C:/Users/furka/Desktop/computer-vision/cnn-with-opencv/digit-recognition/model_trained_new.pickle","wb")
+"""pickle_out = open("C:/Users/furka/Desktop/computer-vision/cnn-with-opencv/digit-recognition/model_trained_new.pickle","wb")
 pickle.dump(model, pickle_out)
-pickle_out.close()
+pickle_out.close()"""
 
 model.save("C:/Users/furka/Desktop/computer-vision/cnn-with-opencv/digit-recognition/modelWeights.h5")
 
