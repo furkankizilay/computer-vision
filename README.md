@@ -15,6 +15,8 @@ Computer vision with OpenCV involves the utilization of the Open Source Computer
 
 [CNN with OpenCV](cnn-with-opencv/README.md)
 
+[Object Detection with CNN and OpenCV](object-detection-with-cnn/README.md)
+
 
 
 
